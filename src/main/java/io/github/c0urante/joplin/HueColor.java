@@ -20,8 +20,7 @@ import java.nio.ByteBuffer;
 public interface HueColor {
 
   int COLOR_SPACE_RGB = 0;
-  // TODO
-  // int COLOR_SPACE_XYB = 1;
+  int COLOR_SPACE_XYB = 1;
 
   void serializeTo(ByteBuffer byteBuffer);
 

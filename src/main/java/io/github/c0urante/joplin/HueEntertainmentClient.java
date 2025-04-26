@@ -145,11 +145,10 @@ public class HueEntertainmentClient implements AutoCloseable {
       return this;
     }
 
-    // TODO
-    // public Builder colorSpace(int colorSpace) {
-    //   this.colorSpace = colorSpace;
-    //   return this;
-    // }
+     public Builder colorSpace(int colorSpace) {
+       this.colorSpace = colorSpace;
+       return this;
+     }
 
     public Builder entertainmentArea(String entertainmentArea) {
       this.entertainmentArea = entertainmentArea;

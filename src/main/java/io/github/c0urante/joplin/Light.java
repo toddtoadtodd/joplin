@@ -18,11 +18,13 @@ package io.github.c0urante.joplin;
 import java.nio.ByteBuffer;
 
 public class Light {
+  public static final int DEFAULT_BRIGHTNESS = 255; // max bright
 
   private final byte channel;
   private final HueColor color;
+  private final int brightness;
 
-  public Light(int channel, HueColor color) {
+  public Light(int channel, HueColor color, int brightness) {
     if (channel < 0 || channel > 255)
       throw new IllegalArgumentException(
           "Invalid value " + channel
@@ -32,6 +34,11 @@ public class Light {
 
     this.channel = (byte) channel;
     this.color = color;
+    this.brightness = brightness;
+  }
+
+  public Light(int channel, HueColor color) {
+    this(channel, color, DEFAULT_BRIGHTNESS);
   }
 
   public void serializeTo(ByteBuffer byteBuffer) {

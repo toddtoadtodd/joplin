@@ -48,6 +48,18 @@ public class Validation {
     validateColor(blue, "blue");
   }
 
+  public static void x(float x) {
+    // TODO(todd)
+  }
+
+  public static void y(float y) {
+    // TODO(todd)
+  }
+
+  public static void brightness(int brightness) {
+    // TODO(todd)
+  }
+
   private static void validateColor(int value, String color) {
     if (value > 0xFFFF)
       throw new IllegalArgumentException(
